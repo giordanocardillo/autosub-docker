@@ -8,11 +8,9 @@
 #   * $HOME if it's set
 #
 
-
 set -e
 
 IMAGE="giordanocardillo/autosub-docker"
-
 
 # Setup options for connecting to docker host
 if [ -z "$DOCKER_HOST" ]; then
@@ -23,7 +21,6 @@ if [ -S "$DOCKER_HOST" ]; then
 else
     DOCKER_ADDR="-e DOCKER_HOST -e DOCKER_TLS_VERIFY -e DOCKER_CERT_PATH"
 fi
-
 
 # Setup volume mounts for context
 if [ "$(pwd)" != '/' ]; then
@@ -41,3 +38,6 @@ fi
 if [ -t 0 ]; then
     DOCKER_RUN_OPTIONS="$DOCKER_RUN_OPTIONS -i"
 fi
+
+exec docker run --rm $DOCKER_RUN_OPTIONS $DOCKER_ADDR $VOLUMES -w "$(pwd)" $IMAGE "$@"
+
