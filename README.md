@@ -1,3 +1,5 @@
+[![Docker Stars](https://img.shields.io/docker/stars/giordanocardillo/autosub-docker.svg?style=flat-square)](https://hub.docker.com/r/giordanocardillo/autosub-docker/) [![Docker Pulls](https://img.shields.io/docker/pulls/giordanocardillo/autosub-docker.svg?style=flat-square)](https://hub.docker.com/r/giordanocardillo/autosub-docker/) [![Docker Automated build](https://img.shields.io/docker/automated/giordanocardillo/autosub-docker.svg?style=flat-square)](https://hub.docker.com/r/giordanocardillo/autosub-docker/)
+
 # Autosub Docker
 
 This is just a Docker port of the very good autosub Python utility by [agermanidis](https://github.com/agermanidis/autosub).
